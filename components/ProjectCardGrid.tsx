@@ -41,6 +41,13 @@ export default function ProjectCardGrid({ projects }: ProjectCardGridProps) {
               {/* Keep available project videos as the animated card preview. */}
               {project.videoUrl ? (
                 <div className="relative w-full h-full">
+                  <Image
+                    src={project.image}
+                    alt=""
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 33vw"
+                    className="object-cover object-top"
+                  />
                   <video
                     src={project.videoUrl}
                     poster={project.image}
@@ -49,7 +56,10 @@ export default function ProjectCardGrid({ projects }: ProjectCardGridProps) {
                     muted
                     playsInline
                     preload="metadata"
-                    className="w-full h-full object-cover object-top opacity-85 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                    onError={(event) => {
+                      event.currentTarget.style.display = "none";
+                    }}
+                    className="relative z-10 w-full h-full object-cover object-top opacity-85 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                   />
                   <div className="media-overlay-label absolute bottom-3 right-3 z-20 flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-950/80 text-[10px] font-mono border border-white/10">
                     <Film className="w-3 h-3" />

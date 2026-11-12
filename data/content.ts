@@ -253,7 +253,7 @@ export const projects: ProjectItem[] = [
     technologies: ["Python", "FastAPI", "Streamlit", "LangChain", "Llama 3", "Ollama", "FAISS", "Sentence-Transformers"],
     githubUrl: "https://github.com/prashantgupta/AI-Business-Operations-Copilot",
     liveDemoUrl: "https://ai-business-operations-copilotgit.streamlit.app/",
-    videoUrl: "/videos/ai-business-copilot-video.mp4",
+    videoUrl: "https://media.githubusercontent.com/media/prashantgupta2109/portfolio/main/public/videos/ai-business-copilot-video.mp4",
     featured: true
   },
   {
@@ -298,7 +298,7 @@ export const projects: ProjectItem[] = [
     technologies: ["Python", "Pandas", "Scikit-Learn", "RegEx", "PDFPlumber", "Streamlit", "Plotly"],
     githubUrl: "https://github.com/prashantgupta/StatementIQ",
     liveDemoUrl: "https://statementiq.streamlit.app/",
-    videoUrl: "/videos/statementiq-video.mp4",
+    videoUrl: "https://media.githubusercontent.com/media/prashantgupta2109/portfolio/main/public/videos/statementiq-video.mp4",
     featured: true
   },
   {
