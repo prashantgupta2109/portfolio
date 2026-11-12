@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --background: #f5f4ef;
+  --foreground: #252d29;
+  --surface: #fffefa;
+  --surface-raised: #eeefe9;
+  --border: rgba(37, 45, 41, 0.12);
+  --accent: #47796f;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+[class~="text-white"],
+[class~="text-slate-100"] {
+  color: #252d29 !important;
+}
+
+[class~="text-slate-200"] {
+  color: #35423c !important;
+}
+
+[class~="text-slate-300"] {
+  color: #4b5a52 !important;
+}
+
+[class~="text-slate-400"] {
+  color: #657269 !important;
+}
+
+[class~="text-slate-500"] {
+  color: #778178 !important;
+}
+
+[class~="hover:text-white"]:hover {
+  color: #252d29 !important;
+}
+
+[class~="group-hover:text-white"] {
+  color: #252d29 !important;
+}
+
+[class~="text-cyan-300"],
+[class~="text-cyan-400"],
+[class~="text-[#9ac8c2]"],
+[class~="text-[#c5e1dd]"],
+[class~="text-[#b8d8d3]"] {
+  color: #39766b !important;
+}
+
+[class~="text-emerald-200"],
+[class~="text-emerald-300"],
+[class~="text-emerald-400"] {
+  color: #347353 !important;
+}
+
+[class~="text-indigo-300"],
+[class~="text-indigo-400"] {
+  color: #555e91 !important;
+}
+
+[class~="text-purple-300"],
+[class~="text-purple-400"] {
+  color: #705590 !important;
+}
+
+[class~="text-amber-300"],
+[class~="text-amber-400"] {
+  color: #89611d !important;
+}
+
+[class~="bg-slate-900/60"],
+[class~="bg-slate-900/70"],
+[class~="bg-slate-900/80"],
+[class~="bg-slate-900/90"] {
+  background-color: var(--surface);
+}
+
+[class~="bg-slate-900"],
+[class~="bg-slate-800"],
+[class*="bg-[#14191d]"],
+[class*="bg-[#101316]"],
+[class*="bg-[#0f1316]"],
+[class*="bg-[#0c0f12]"],
+[class*="bg-[#0b1120]"],
+[class*="bg-[#070a12]"] {
+  background-color: var(--surface) !important;
+}
+
+[class~="bg-slate-800/40"],
+[class~="bg-slate-800/50"],
+[class~="bg-slate-800/60"],
+[class~="bg-slate-800/70"],
+[class~="bg-slate-800/80"],
+[class~="bg-slate-800/90"] {
+  background-color: var(--surface-raised);
+}
+
+[class*="bg-white/"] {
+  background-color: rgba(37, 45, 41, 0.035);
+}
+
+[class*="border-white/"],
+[class*="border-slate-700/"] {
+  border-color: var(--border) !important;
+}
+
+[class*="hover:border-white/"]:hover {
+  border-color: rgba(57, 118, 107, 0.28) !important;
+}
+
+[class~="backdrop-blur-sm"],
+[class~="backdrop-blur-md"],
+[class~="backdrop-blur-lg"],
+[class~="backdrop-blur-xl"],
+[class~="backdrop-blur-2xl"] {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.bg-grid-pattern {
+  background-image: none;
+}
+
+.ambient-glow-cyan,
+.ambient-glow-purple {
+  display: none;
+}
+
+.glass-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.glass-panel-hover {
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(154, 200, 194, 0.35);
+}
+
+.media-overlay-label {
+  color: #eef3ed !important;
+  background-color: rgba(26, 38, 34, 0.9) !important;
+}
+
+.media-overlay-label [class*="text-"] {
+  color: #c4ddd3 !important;
+}
+
+.contact-mesh {
+  position: absolute;
+  z-index: 0;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 9999px;
+  filter: blur(36px);
+  opacity: 0.18;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.contact-mesh-one {
+  top: -5rem;
+  left: -4rem;
+  background: radial-gradient(circle, rgba(102, 171, 162, 0.8), transparent 68%);
+}
+
+.contact-mesh-two {
+  top: -3rem;
+  right: -5rem;
+  background: radial-gradient(circle, rgba(100, 126, 158, 0.55), transparent 68%);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c6cbc4;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8b0a7;
+}
+
+::selection {
+  background: rgba(71, 121, 111, 0.2);
+  color: var(--foreground);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

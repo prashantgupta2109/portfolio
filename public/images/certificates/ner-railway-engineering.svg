@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <defs>
+    <linearGradient id="cert-grad-ner-railway-engineering" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16a34a" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#090d16" stop-opacity="0.95" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="#090d16" />
+  <rect x="30" y="30" width="740" height="460" rx="20" fill="rgba(15,23,42,0.92)" stroke="#16a34a" stroke-width="2" />
+  <rect x="50" y="50" width="700" height="420" rx="16" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="6 6" />
+  <text x="400" y="110" fill="#16a34a" font-family="system-ui, sans-serif" font-size="14" font-weight="700" letter-spacing="3" text-anchor="middle">CERTIFICATE OF EXCELLENCE</text>
+  <text x="400" y="160" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">Presented to</text>
+  <text x="400" y="215" fill="#ffffff" font-family="system-ui, sans-serif" font-size="32" font-weight="800" text-anchor="middle">PRASHANT GUPTA</text>
+  <text x="400" y="270" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="20" font-weight="600" text-anchor="middle">Industrial Automation & Electrical Engineering Trainee</text>
+  <text x="400" y="310" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="15" text-anchor="middle">Issued by North Eastern Railway (NER) (Indian Railways)</text>
+  <line x1="250" y1="360" x2="550" y2="360" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+  <text x="400" y="410" fill="#64748b" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">Verified Credential | Madan Mohan Malaviya University of Technology</text>
+</svg>
