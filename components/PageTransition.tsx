@@ -2,7 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import { ReactNode } from "react";
+import { ReactNode, useLayoutEffect } from "react";
 
 interface PageTransitionProps {
   children: ReactNode;
@@ -11,6 +11,12 @@ interface PageTransitionProps {
 export default function PageTransition({ children }: PageTransitionProps) {
   const pathname = usePathname();
   const reduceMotion = useReducedMotion();
+
+  useLayoutEffect(() => {
+    if (window.location.pathname === "/") {
+      window.scrollTo(0, 0);
+    }
+  }, []);
 
   return (
     <motion.div

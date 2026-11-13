@@ -1,20 +1,34 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export function middleware(request: NextRequest) {
-  const isClientNavigation =
-    request.headers.has("rsc") ||
-    request.headers.has("next-router-state-tree");
-  const pathname = request.nextUrl.pathname.replace(/\/+$/, "");
+const VISITED_COOKIE = "portfolio-visited";
 
-  if (pathname === "/projects" && !isClientNavigation) {
-    const homeUrl = request.nextUrl.clone();
-    homeUrl.pathname = "/";
-    return NextResponse.redirect(homeUrl);
+export function middleware(request: NextRequest) {
+  if (request.cookies.has(VISITED_COOKIE)) {
+    return NextResponse.next();
   }
 
-  return NextResponse.next();
+  const isHomePage = request.nextUrl.pathname === "/";
+  const response = isHomePage
+    ? NextResponse.next()
+    : NextResponse.redirect(new URL("/", request.url));
+
+  response.cookies.set(VISITED_COOKIE, "1", {
+    httpOnly: true,
+    path: "/",
+    sameSite: "lax",
+    secure: request.nextUrl.protocol === "https:",
+  });
+
+  return response;
 }
 
 export const config = {
-  matcher: ["/projects/:path*"],
+  matcher: [
+    "/",
+    "/projects/:path*",
+    "/contact",
+    "/experience",
+    "/skills",
+    "/certificates",
+  ],
 };
